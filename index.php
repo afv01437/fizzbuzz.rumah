@@ -6,5 +6,16 @@
 </head>
 
 <body>
+<form action="" method="get">
+  <p>Start:
+  <input name="start" type="text" value="1" />
+  </p>
+  <p>Stop:
+  <input name="stop" type="text" value="100" />
+  </p>
+  <p>
+    <input type="submit" name="send" id="send" value="Submit" />
+  </p>
+</form>
 </body>
 </html>
