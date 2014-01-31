@@ -12,7 +12,7 @@ $result = "Start=$start<br />";
 $result .= "Stop=$stop<br />";
 
 for($i=$start;$i<=$stop;$i++) {
-	$result .= fizbuzz($i)." " ;
+	$result .= fizbuzzbazz($i)." " ;
 }
 
 function fizbuzz($val) {
@@ -22,6 +22,17 @@ function fizbuzz($val) {
 	if ($ret=='') $ret=$val;
 	return $ret;
 }
+function fizbuzzbazz($val) {
+	$ret=fizbuzz($val);
+	if (!($ret>0)) {
+		return $ret;
+	}
+	if ($val>2 && !(fizbuzz($val-1)>0) && !(fizbuzz($val-2)>0)) {
+		return 'Bazz';
+	}
+	return $val;
+}
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
