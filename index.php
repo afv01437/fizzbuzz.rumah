@@ -12,9 +12,16 @@ $result = "Start=$start<br />";
 $result .= "Stop=$stop<br />";
 
 for($i=$start;$i<=$stop;$i++) {
-	$result .= $i." " ;
+	$result .= fizbuzz($i)." " ;
 }
 
+function fizbuzz($val) {
+	$ret='';
+	if ($val%3==0) $ret.='Fizz';
+	if ($val%5==0) $ret.='Buzz';
+	if ($ret=='') $ret=$val;
+	return $ret;
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
